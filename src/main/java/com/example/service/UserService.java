@@ -27,6 +27,6 @@ public class UserService {
     public Uni<UserDTO> saveUser(UserPostDto postDto) {
         return userMapper.mapUserPostDtoToEntity(postDto)
                 .flatMap(userRepository::persist)
-                .map(userMapper::mapUserEntityToDTO)
+                .map(userMapper::mapUserEntityToDTO);
     }
 }
