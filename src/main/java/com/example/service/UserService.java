@@ -21,6 +21,7 @@ public class UserService {
     }
 
     public Uni<UserEntity> findById(String id) {
+        //TODO we will need to convert the id first and remove the salt added
         return userRepository.findById(ObjectId.get());
     }
 

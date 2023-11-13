@@ -11,6 +11,8 @@ import org.bson.types.ObjectId;
 public class UserMapper {
 
     public UserDTO mapUserEntityToDTO(UserEntity entity) {
+
+        //TODO generate ID to send with salted text
         return null;
     }
 
