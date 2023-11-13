@@ -1,4 +1,9 @@
 package com.example.repo;
 
-public class UserRepository {
+import com.example.entity.UserEntity;
+import io.quarkus.mongodb.panache.reactive.ReactivePanacheMongoRepository;
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
+public class UserRepository implements ReactivePanacheMongoRepository<UserEntity> {
 }
