@@ -11,11 +11,11 @@ import org.jboss.resteasy.reactive.ResponseStatus;
 import org.jboss.resteasy.reactive.RestResponse;
 
 @Path("/user")
-public class UserAPI {
+public class UserResource {
 
     private final UserService userService;
 
-    public UserAPI(UserService userService) {
+    public UserResource(UserService userService) {
         this.userService = userService;
     }
 
