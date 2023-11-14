@@ -1,22 +1,21 @@
-package com.example.entity;
+package com.example.dto;
 
-import io.quarkus.mongodb.panache.common.MongoEntity;
-import org.bson.codecs.pojo.annotations.BsonId;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
-@MongoEntity(collection = "users", database = "app")
-public class UserEntity {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class UserGetDto {
 
-    @BsonId
     private String id;
+
     private String firstName;
     private String lastName;
     private String email;
     private boolean marketingConsent;
 
-    public UserEntity() {
+    public UserGetDto() {
     }
 
-    public UserEntity(String id, String firstName, String lastName, String email, boolean marketingConsent) {
+    public UserGetDto(String id, String firstName, String lastName, String email, boolean marketingConsent) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -63,4 +62,5 @@ public class UserEntity {
     public void setMarketingConsent(boolean marketingConsent) {
         this.marketingConsent = marketingConsent;
     }
+
 }
